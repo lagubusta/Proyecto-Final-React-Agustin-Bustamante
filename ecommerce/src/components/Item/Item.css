@@ -1,33 +1,38 @@
 .CardItem {
-    background-color: rgb(72, 1, 1);
+    background-color: rgb(246, 246, 246);
     width: 20%;
     border: rgba(0, 0, 0, 0.287) solid 3px;
     margin: auto;
-    height: fit-content;
+    height: max-content;
     justify-content: space-between;
 }
 
 .Header{
-    color: #150000;;
+    color: #150000;
 }
 .ItemHeader{
     background-color: rgb(255, 128, 0);
     height: 50px;
 }
 .ItemImg {
-    width: 100px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .Info {
-    color: wheat;
+    color: #150000;
 }
 
 .ItemFooter {
     background-color: rgb(0, 0, 53);
     height: 50px;
-    color: black;
+    color: #150000;
     margin: auto;
     width: 50%;
-    
-    
+    display: flex;
+}
+
+.Option2{
+    color: rgb(255, 128, 0);   
+    margin: auto;    
 }
