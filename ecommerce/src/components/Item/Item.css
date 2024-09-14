@@ -1,9 +1,33 @@
 .CardItem {
-    background-color: tomato;
-    width: 300px;
-    border-radius: 5%;
+    background-color: rgb(72, 1, 1);
+    width: 20%;
+    border: rgba(0, 0, 0, 0.287) solid 3px;
+    margin: auto;
+    height: fit-content;
+    justify-content: space-between;
 }
 
+.Header{
+    color: #150000;;
+}
+.ItemHeader{
+    background-color: rgb(255, 128, 0);
+    height: 50px;
+}
 .ItemImg {
     width: 100px;
+}
+
+.Info {
+    color: wheat;
+}
+
+.ItemFooter {
+    background-color: rgb(0, 0, 53);
+    height: 50px;
+    color: black;
+    margin: auto;
+    width: 50%;
+    
+    
 }

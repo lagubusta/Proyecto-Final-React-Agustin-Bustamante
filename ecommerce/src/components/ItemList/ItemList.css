@@ -1,0 +1,8 @@
+.ListGrup {
+    background-color: red;
+    /* justify-content: center; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
