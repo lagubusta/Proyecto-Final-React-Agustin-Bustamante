@@ -1,0 +1,9 @@
+.CardItem {
+    background-color: tomato;
+    width: 300px;
+    border-radius: 5%;
+}
+
+.ItemImg {
+    width: 100px;
+}

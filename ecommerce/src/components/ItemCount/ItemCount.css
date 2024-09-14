@@ -1,0 +1,15 @@
+.Counter{
+    margin: auto;
+    width: 200px;
+    background-color: rgb(255, 128, 0);
+}
+
+.Controls{
+    display: flex;
+    justify-content: center;
+}
+
+.Button{
+    background-color: rgb(0, 0, 53);
+    color: rgb(255, 128, 0);
+}

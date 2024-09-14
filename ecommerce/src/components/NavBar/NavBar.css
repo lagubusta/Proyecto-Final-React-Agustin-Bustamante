@@ -1,0 +1,32 @@
+.NavBar{
+    justify-content: center;
+    display: flex;
+    background-color: rgb(0, 0, 53);
+    align-items: center;
+}
+
+.Cartegorias{
+    border: 3px  rgb(255, 128, 0) solid;;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+}
+
+h1{
+    color: rgb(255, 128, 0);
+}
+
+button {
+    background-color: rgb(255, 128, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+
+.img-carrito{
+    width: 35px;
+}
+
+h5{
+    color: rgb(255, 128, 0);
+}
