@@ -1,22 +1,22 @@
+import './CartItem.css';
+
 const CartItem = ({ id, name, img, category, description, price, stock }) => {
 
-    
-    
-    return( 
-        <div>
-          <article className="">
+
+
+    return (
+        <div className='cart-container'>
+            <article className="arti-contenedor">
+                <picture>
+                    <img src={img} alt={name} className="cart-img" />
+                    x CANTIDAD
+                </picture>
                 <header className="">
                     <h2 className=""> {name} </h2>
                 </header>
-                <picture>
-                    {/* <img src={img} alt={name} className="d-ItemImg" /> */}
-                </picture>
                 <section>
                     <p className="">
                         Categoria: {category}
-                    </p>
-                    <p className="">
-                        Descripción: {description}
                     </p>
                     <p className="">
                         Price: ${price}

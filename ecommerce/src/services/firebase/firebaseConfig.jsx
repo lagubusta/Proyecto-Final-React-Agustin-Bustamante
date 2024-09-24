@@ -1,17 +1,19 @@
-// Import the functions you need from the SDKs you need
+// ECOMMERCE
 import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCxeEvQ3ht1y9TfjzDFJcO-1AI6E-6RAK0",
-  authDomain: "tienda-online-df564.firebaseapp.com",
-  projectId: "tienda-online-df564",
-  storageBucket: "tienda-online-df564.appspot.com",
-  messagingSenderId: "49747043693",
-  appId: "1:49747043693:web:e14b9800ffc839d3e7e664"
+  apiKey: "AIzaSyBXlHgWH6F2cAZDhrpbQc33Ha2aNr77o2o",
+  authDomain: "ecommerce-24a95.firebaseapp.com",
+  projectId: "ecommerce-24a95",
+  storageBucket: "ecommerce-24a95.appspot.com",
+  messagingSenderId: "152868933457",
+  appId: "1:152868933457:web:5f825ba54bb40b47590d70"
 };
 
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)
+

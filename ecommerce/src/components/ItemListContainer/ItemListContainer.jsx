@@ -16,13 +16,14 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         setLoading(true)
+        
         const collectionRef = categoryId
-            ? query(collection(db, 'items'), where('category', '==', categoryId))
-            : collection(db, 'items')
+            ? query(collection(db, 'products'), where('category', '==', categoryId))
+            : collection(db, 'products')
 
         getDocs(collectionRef)
             .then(response => {
-                const productsAdapted = response.docs.map(docs => {
+                const productsAdapted = response.docs.map(doc => {
                     const data = doc.data()
                     return { id: doc.id, ...data }
                 })
@@ -36,14 +37,14 @@ const ItemListContainer = ({ greeting }) => {
             })
 
 
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts
-        asyncFunc(categoryId)
-            .then(response => {
-                setProducts(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
+        // const asyncFunc = categoryId ? getProductsByCategory : getProducts
+        // asyncFunc(categoryId)
+        //     .then(response => {
+        //         setProducts(response)
+        //     })
+        //     .catch(error => {
+        //         console.error(error)
+        //     })
     }, [categoryId])
 
     return (

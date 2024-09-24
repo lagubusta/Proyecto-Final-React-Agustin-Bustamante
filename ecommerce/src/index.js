@@ -4,23 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCxeEvQ3ht1y9TfjzDFJcO-1AI6E-6RAK0",
-  authDomain: "tienda-online-df564.firebaseapp.com",
-  projectId: "tienda-online-df564",
-  storageBucket: "tienda-online-df564.appspot.com",
-  messagingSenderId: "49747043693",
-  appId: "1:49747043693:web:e14b9800ffc839d3e7e664"
-};
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCxeEvQ3ht1y9TfjzDFJcO-1AI6E-6RAK0",
+//   authDomain: "tienda-online-df564.firebaseapp.com",
+//   projectId: "tienda-online-df564",
+//   storageBucket: "tienda-online-df564.appspot.com",
+//   messagingSenderId: "49747043693",
+//   appId: "1:49747043693:web:e14b9800ffc839d3e7e664"
+// };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

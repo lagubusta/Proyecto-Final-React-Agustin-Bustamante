@@ -6,11 +6,13 @@ import { useParams } from 'react-router-dom';
 
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../../services/firebase/firebaseConfig';
+import Item from '../Item/Item';
 
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
+    const { productId } = useParams();
 
     const { itemId } = useParams()
 
@@ -18,13 +20,13 @@ function ItemDetailContainer() {
         
         setLoading(true)
 
-        const docRef = doc(db, 'items', itemId)
+        const docRef = doc(db, 'products', itemId)
 
         getDoc(docRef)
         .then(response => {
             const data = response.data()
-            const productsAdapted = {id: response.id, ...data}
-            setProduct(productsAdapted)
+            const productAdapted = {id: response.id, ...data}
+            setProduct(productAdapted)
         })
         .catch(error => {
             console.log(error)
@@ -45,8 +47,13 @@ function ItemDetailContainer() {
     }, [])
 
     return (
-        <div className="ItemDetailContainer">
-            <ItemDetail {...product} />
+
+        <div>
+            {loading ? (
+                <p>Loading...</p>
+            ) : (
+                product && <ItemDetail {...product} />
+            )}
         </div>
     )
 }
