@@ -1,24 +1,57 @@
-.CardItem {
+/* .CardItem {
     background-color: rgb(246, 246, 246);
     width: 20%;
     border: rgba(0, 0, 0, 0.287) solid 3px;
     margin: auto;
     height: max-content;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+} */
+.CardItem{
+    background-color: rgb(246, 246, 246);
+    width: 20%;
+    border: rgba(0, 0, 0, 0.287) solid 3px;
+    margin: 6px; /* Espacio alrededor de cada tarjeta */
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
 }
+
+
+
 
 .Header{
     color: #150000;
+    display: flex;
 }
 .ItemHeader{
     background-color: rgb(255, 128, 0);
+    width: 100%;
+    padding: 10px ;
     height: 50px;
+    margin: auto;
+    align-content: center;
 }
-.ItemImg {
-    max-width: 200px;
-    max-height: 200px;
+.contenedor-img {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+    padding-top: 25px;
+    
 }
 
+.ItemImg {
+    
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    
+}
 .Info {
     color: #150000;
 }
@@ -36,3 +69,4 @@
     color: rgb(255, 128, 0);   
     margin: auto;    
 }
+

@@ -1,5 +1,6 @@
 .ItemDetailContainer{
     height: fit-content;
-    height: fit-content;
-    background-color: wheat;
+    background-color: rgb(139, 31, 112);
+    color: red;
+    width: 100%;
 }

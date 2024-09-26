@@ -8,7 +8,7 @@ const Item = ({id, name, img, price, stock}) =>{
             <header className="Header">
                 <h2 className="ItemHeader"> {name}</h2>
             </header>
-            <picture>
+            <picture className='contenedor-img'>
                 <img src= {img} alt= {name} className="ItemImg"/>
             </picture>
             <section>
@@ -16,7 +16,7 @@ const Item = ({id, name, img, price, stock}) =>{
                     Precio: ${price}
                 </p>
                 <p className="Info">
-                    Stock disponible: {stock}
+                    Disponible: {stock}
                 </p>
             </section>
             <footer className="ItemFooter">
