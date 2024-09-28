@@ -1,24 +1,30 @@
 .Counter{
-    margin: auto;
-    background-color: rgb(255, 128, 0);
-    /* display: flex; */
-    
+    text-align: centrer;
+    background-color: rgba(220, 116, 11, 0.188);
+
+    width: 100%;
+
 }
 
 .Controls{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 20;
+    margin: auto;
+    text-align: center;
     
 }
 
 .Container-Buttons{
+    
     align-items: center;
     justify-content: center;
     height: fit-content;
     padding: 0.2rem;
     justify-items: center;
+    padding-bottom: 10px;
+    
 }
 
 .Button{

@@ -1,13 +1,4 @@
-/* .CardItem {
-    background-color: rgb(246, 246, 246);
-    width: 20%;
-    border: rgba(0, 0, 0, 0.287) solid 3px;
-    margin: auto;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
 
-} */
 .CardItem{
     background-color: rgb(246, 246, 246);
     width: 20%;

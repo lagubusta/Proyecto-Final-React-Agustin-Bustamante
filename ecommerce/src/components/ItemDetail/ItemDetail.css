@@ -1,37 +1,40 @@
+.main-detail{
+    min-height: 100vh;
+}
+
 .d-CardItem{
-    background-color: rgb(225, 116, 0);  
-    padding: 1rem;
-    height: 100%;
-    width: fit-content;
+    background-color: rgb(230, 210, 174);
     margin: auto;
-    text-align: center;
+    max-width: 600px;
+    min-width: 400;
+    width: 80%;
+    padding: 20px;   
+}
+
+
+.img-box {
+    background-color: white;
+    justify-content: center;
+    align-items: left;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    
     
 }
 
-.d-Header{
-    background-color: red;
-}
-
-.d-ItemHeader{
-    background-color: rgb(0, 0, 53);
-    color:  rgb(255, 128, 0);    
-    height: 50px;
-}
-
 .d-ItemImg {
-    max-width: 200px;
-    max-height: 200px;
-}
-.d-Info {
-    color:rgb(0, 0, 53);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;   
 }
 
+.d-Header{
+    text-align: left;
+}
 
-.d-ItemFooter {
-    background-color: rgb(60, 60, 215);
-    height: 50px;
-    color: #150000;
-    margin: auto;
-    width: 50%;
-    display: flex;
+.d-Description{
+    text-align: left;
 }

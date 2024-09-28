@@ -20,15 +20,15 @@ const ItemDetail = ({ id, name, img, category, price, stock }) => {
         addItem(item, quantity)
     }
     return (
-        <main>
+        <main className='main-detail'>
             <article className="d-CardItem">
-                <header className="Header">
-                    <h2 className="d-ItemHeader"> {name} </h2>
-                </header>
-                <picture>
+                <picture className='img-box'>
                     <img src={img} alt={name} className="d-ItemImg" />
                 </picture>
-                <section>
+                <header className="d-Header">
+                    <h2 className="d-ItemHeader"> {name} </h2>
+                </header>
+                <section className='d-Description'>
                     <p className="d-Info">
                         Categoria: {category}
                     </p>
@@ -36,6 +36,7 @@ const ItemDetail = ({ id, name, img, category, price, stock }) => {
                         Price: ${price}
                     </p>
                 </section>
+                
                 <footer className="d-ItemFooter">
                     {
                         quantityAdded > 0 ? (
