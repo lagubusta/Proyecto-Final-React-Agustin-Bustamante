@@ -48,7 +48,7 @@ const Checkout = () => {
 
     if (orderId) {
         return (
-            <div>
+            <div className='div-exito'>
                 <h3>¡Compra realizada con éxito!</h3>
                 <p>El ID de su orden es: <strong>{orderId}</strong></p>
                 <Link to='/'>Volver a la tienda</Link>
@@ -58,7 +58,7 @@ const Checkout = () => {
 
     return (
         <div className='checkout-form'>
-            <h2>Checkout</h2>
+            <h2 className='check-titulos'>Checkout</h2>
             <form onSubmit={handleCreateOrder}>
                 <div>
                     <label htmlFor='name'>Nombre</label>

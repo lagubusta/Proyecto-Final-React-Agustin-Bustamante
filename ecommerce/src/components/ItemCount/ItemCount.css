@@ -1,36 +1,36 @@
-.Counter{
+.Counter {
     text-align: centrer;
-    background-color: rgba(220, 116, 11, 0.188);
-
+    background-color: var(--colorAmarillo);
     width: 100%;
 
 }
 
-.Controls{
+.Controls {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 20;
     margin: auto;
     text-align: center;
-    
+
 }
 
-.Container-Buttons{
-    
+.Container-Buttons {
+
     align-items: center;
     justify-content: center;
     height: fit-content;
     padding: 0.2rem;
     justify-items: center;
     padding-bottom: 10px;
-    
+
 }
 
-.Button{
+.Button {
     width: max-content;
     margin: 0 1rem;
-    background-color: rgb(0, 0, 53);
-    color: rgb(255, 128, 0);
+    background-color: var(--colorVioletaOscuro);
+    color: var(--colorAmarillo);
+    ;
     height: fit-content;
 }

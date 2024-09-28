@@ -1,23 +1,24 @@
 
 .CardItem{
-    background-color: rgb(246, 246, 246);
+    background-color: var(--colorBlanco);
     width: 20%;
-    border: rgba(0, 0, 0, 0.287) solid 3px;
+    border: var(--colorVioletaOscuro) solid 3px;
     margin: 6px; /* Espacio alrededor de cada tarjeta */
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    padding: 5px;
 }
 
 
 
 
 .Header{
-    color: #150000;
+    color: var(--colorVioletaOscuro);
     display: flex;
 }
 .ItemHeader{
-    background-color: rgb(255, 128, 0);
+    background-color:var(--colorAmarillo);
     width: 100%;
     padding: 10px ;
     height: 50px;
@@ -29,7 +30,7 @@
     height: 120px;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: var(--colorBlanco);
     justify-content: center;
     margin: auto;
     padding-top: 25px;
@@ -44,20 +45,20 @@
     
 }
 .Info {
-    color: #150000;
+    color: var(--colorVioletaOscuro);
 }
 
 .ItemFooter {
-    background-color: rgb(0, 0, 53);
+    background-color: var(--colorVioletaOscuro);
     height: 50px;
-    color: #150000;
+    color:  var(--colorVioletaOscuro);;
     margin: auto;
     width: 50%;
     display: flex;
 }
 
 .Option2{
-    color: rgb(255, 128, 0);   
+    color:  var(--colorAmarillo);;   
     margin: auto;    
 }
 

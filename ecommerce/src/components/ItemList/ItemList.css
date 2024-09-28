@@ -1,21 +1,8 @@
-/* .ListGrup {
-    margin: auto;
-    background-color: rgb(59, 59, 165);
+.ListGrup{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
-    align-items: stretch;
-    width: 80%;
-} */
-
-
-/* ai */ 
-.ListGrup{
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten */
-    justify-content: space-between; /* Espacio entre tarjetas */
     width: 90%;
-    margin: 0 auto; /* Centra el contenedor */
+    margin: 0 auto;
     justify-content: center;
 }

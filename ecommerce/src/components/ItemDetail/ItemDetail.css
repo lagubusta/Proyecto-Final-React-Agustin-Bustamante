@@ -3,7 +3,7 @@
 }
 
 .d-CardItem{
-    background-color: rgb(230, 210, 174);
+    background-color: var(--colorBlanco);
     margin: auto;
     max-width: 600px;
     min-width: 400;
@@ -13,7 +13,7 @@
 
 
 .img-box {
-    background-color: white;
+    background-color:  var(--colorBlancoImg);;
     justify-content: center;
     align-items: left;
     margin: auto;

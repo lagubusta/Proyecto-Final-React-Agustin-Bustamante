@@ -52,7 +52,7 @@ const OrderHistory = () => {
 
                             <span key={order.id} className='order-item'>
                                 <div className='order-summary'>
-                                    <h3>ID de Orden: {order.id}</h3>
+                                    <p>ID: {order.id}</p>
                                     <p>Total: ${order.total}</p>
                                     <button
                                         className='Button'
@@ -61,22 +61,21 @@ const OrderHistory = () => {
                                         {visibleOrders.includes(order.id) ? 'Ocultar' : 'Ver detalle'}
                                     </button>
                                 </div>
-
-                                
                                 {visibleOrders.includes(order.id) && (
                                     <div className='order-details'>
-                                        <h4>Datos del Comprador:</h4>
                                         <span className='d-comprador'>
-                                        <p>Nombre: {order.buyer.name}</p>
-                                        <p>Teléfono: {order.buyer.phone}</p>
-                                        <p>Email: {order.buyer.email}</p>
+                                            <p>Nombre: {order.buyer.name}</p>
+                                            <p>Teléfono: {order.buyer.phone}</p>
+                                            <p>Email: {order.buyer.email}</p>
                                         </span>
-
-                                        <h4>Productos de la Orden:</h4>
                                         <ul>
+                                            <h4>Productos de la Orden:</h4>
                                             {order.items.map((item) => (
-                                                <li key={item.id}>
-                                                    {item.name} - {item.quantity} unidad(es) - ${item.price * item.quantity}
+                                                <li key={item.id} className='prod-historial'>
+                                                    <p>
+                                                    {item.name} x {item.quantity} 
+                                                    </p>
+                                                    <p>= ${item.price * item.quantity}</p>
                                                 </li>
                                             ))}
                                         </ul>

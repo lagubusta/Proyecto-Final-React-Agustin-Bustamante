@@ -2,7 +2,7 @@
 
     justify-content: center;
     display: flex;
-    background-color: rgb(0, 0, 29);
+    background-color: var(--colorVioletaOscuro);
     align-items: center;
     color: black;
     height: fit-content;
@@ -11,7 +11,7 @@
 
 .c-Logo{
     padding-left: 2rem;
-    color: white;
+    color: var(--colorBlanco);
 }
 
 .Cartegorias{
@@ -22,14 +22,14 @@
 }
 
 .ActiveOption {
-    background-color:  rgb(255, 128, 0);
-    color: rgb(0, 0, 53);;
+    background-color:  var(--colorAmarillo);
+    color: var(--colorVioletaOscuro);
     padding: 1rem;
     
 }
 
 .Option{
-    color: rgb(255, 128, 0);   
+    color: var(--colorAmarillo);   
     padding: 1rem;
     
 }

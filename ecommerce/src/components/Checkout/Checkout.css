@@ -1,0 +1,13 @@
+.div-exito{
+    background-color: var(--colorAmarillo);
+    color: var(--colorVioletaOscuro);
+    padding: 10px;
+}
+.check-titulos{
+    color: var(--colorVioletaOscuro);
+}
+.checkout-form{
+    background-color: var(--colorAmarillo);
+    padding: 10px;
+}
+

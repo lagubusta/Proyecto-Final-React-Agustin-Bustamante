@@ -1,6 +1,5 @@
 .ItemDetailContainer{
     height: fit-content;
-    background-color: rgb(139, 31, 112);
-    color: red;
+    background-color:var(--colorAmarillo);
     width: 100%;
 }
