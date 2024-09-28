@@ -8,6 +8,7 @@ import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import OrderHistory from './components/OrderHistory/OrderHistory';
+import Err from './components/Err/Err'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path='/cart' element= {<Cart/>}/>
           <Route path='/checkout' element= {<Checkout/>}/>
           <Route path='/orderhistory' element= {<OrderHistory/>}/>
-          <Route path='*' element= {<h1> Not Found </h1>}/>
+          <Route path='*' element= { <Err/>}/>
         </Routes>
       <Footer></Footer>
       </CartProvider>

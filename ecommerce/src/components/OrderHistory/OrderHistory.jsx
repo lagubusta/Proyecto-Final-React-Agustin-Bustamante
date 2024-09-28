@@ -52,7 +52,7 @@ const OrderHistory = () => {
 
                             <span key={order.id} className='order-item'>
                                 <div className='order-summary'>
-                                    <p>ID: {order.id}</p>
+                                    <h3>ID: {order.id}</h3>
                                     <p>Total: ${order.total}</p>
                                     <button
                                         className='Button'

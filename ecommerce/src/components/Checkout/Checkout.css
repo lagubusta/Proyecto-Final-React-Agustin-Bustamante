@@ -1,7 +1,11 @@
 .div-exito{
-    background-color: var(--colorAmarillo);
-    color: var(--colorVioletaOscuro);
+    background-color: var(--colorVioleta);
+    color: var(--colorAmarillo);
     padding: 10px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 60vh;
 }
 .check-titulos{
     color: var(--colorVioletaOscuro);
@@ -9,5 +13,51 @@
 .checkout-form{
     background-color: var(--colorAmarillo);
     padding: 10px;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    height: 70vh;
 }
 
+.stly-input{
+    margin: 10px auto;
+    padding:10px;
+    width: 80%;
+    text-align: left;
+    background-color: var(--colorVioletaOscuro);
+    color: var(--colorBlanco);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leb{
+    color: var(--colorAmarillo);
+    padding:10px;
+
+}
+.inpu-st{
+    justify-content:first baseline;
+    width: 100%;
+    height: fit-content;
+    
+}
+
+
+
+.error-message{
+    background-color: var(--colorBlanco);
+    color: red;
+    font-size: 25px;
+    margin-top: 50px;
+    padding:10px;
+    
+}
+.stiley-li{
+    
+    padding: 2px;
+    background-color: var(--colorVioletaOscuro);
+    color: var(--colorAmarillo);
+    list-style: none;
+    text-decoration: none ;
+}

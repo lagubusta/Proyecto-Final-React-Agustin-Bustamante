@@ -2,20 +2,23 @@
     display: flex;
     align-items: center;
     margin-right: 2rem;
+    background-color: var(--colorAmarillo );
+    width: 50px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20%;
 }
 .img-carrito{
     height: 30px;
     width: 30px;
-
-    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
 }
 
 .valor{
-    color: rgb(255, 255, 255);
+    color: var(--colorBlanco);
     font-size: 20px;
     
 }
 
 .cantidad-cart{
-    color: aliceblue;
+    color: var(--colorVioletaOscuro);
 }

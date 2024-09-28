@@ -11,9 +11,8 @@
 .arti-contenedor {
     margin: auto;
     text-align: center;
-    
     min-width: 80%;
-    background-color: rgb(251, 154, 8);
+    background-color: var(--colorAmarillo);
     display: flex;
     align-items: center;
     
@@ -25,7 +24,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: var(--colorBlanco);
     justify-content: center;
     margin-left: 10px ;
     
@@ -45,7 +44,7 @@
     justify-content: space-between;
 }
 .Button-carro{
-    background-color: rgb(241, 158, 14);
+    background-color: var(--colorAmarillo);
     align-items: center;
     margin: auto;
     min-width: 30px;

@@ -1,0 +1,11 @@
+.box-error{
+    margin: auto;
+    background-color: var(--colorBlanco);
+    height: 70vh;
+    width: 50%;
+    color: var(--colorVioletaOscuro);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px ;
+}
