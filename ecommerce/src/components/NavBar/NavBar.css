@@ -1,5 +1,4 @@
 .NavBar{
-
     justify-content: center;
     display: flex;
     background-color: var(--colorVioletaOscuro);
@@ -25,13 +24,11 @@
     background-color:  var(--colorAmarillo);
     color: var(--colorVioletaOscuro);
     padding: 1rem;
-    
 }
 
 .Option{
     color: var(--colorAmarillo);   
     padding: 1rem;
-    
 }
 
 .img-carrito{

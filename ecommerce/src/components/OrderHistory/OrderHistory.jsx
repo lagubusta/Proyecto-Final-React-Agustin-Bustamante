@@ -66,14 +66,14 @@ const OrderHistory = () => {
                                         <span className='d-comprador'>
                                             <p>Nombre: {order.buyer.name}</p>
                                             <p>Teléfono: {order.buyer.phone}</p>
-                                            <p>Email: {order.buyer.email}</p>
+                                            <p>Mail: {order.buyer.email}</p>
                                         </span>
                                         <ul>
                                             <h4>Productos de la Orden:</h4>
                                             {order.items.map((item) => (
                                                 <li key={item.id} className='prod-historial'>
                                                     <p>
-                                                    {item.name} x {item.quantity} 
+                                                        {item.name} x {item.quantity}
                                                     </p>
                                                     <p>= ${item.price * item.quantity}</p>
                                                 </li>

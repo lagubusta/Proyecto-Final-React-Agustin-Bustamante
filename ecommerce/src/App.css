@@ -12,17 +12,19 @@
   --colorVioletaOscuro: rgb(0, 0, 0);
   --colorBlanco: rgb(255, 255, 255);
   --colorBlancoImg: rgb(255, 255, 255);
-
 }
+/* COLORES */
 
 
 main{
   background-color: var(--colorVioletaClaro);
+  min-height: 100vh;
   
 }
 
 .App {
   text-align: center;  
+
 }
 
 .App-logo {

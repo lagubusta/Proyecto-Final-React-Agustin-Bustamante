@@ -1,4 +1,4 @@
-.div-exito{
+.div-exito {
     background-color: var(--colorVioleta);
     color: var(--colorAmarillo);
     padding: 10px;
@@ -7,10 +7,12 @@
     align-items: center;
     height: 60vh;
 }
-.check-titulos{
+
+.check-titulos {
     color: var(--colorVioletaOscuro);
 }
-.checkout-form{
+
+.checkout-form {
     background-color: var(--colorAmarillo);
     padding: 10px;
     justify-content: space-around;
@@ -19,9 +21,9 @@
     height: 70vh;
 }
 
-.stly-input{
+.stly-input {
     margin: 10px auto;
-    padding:10px;
+    padding: 10px;
     width: 80%;
     text-align: left;
     background-color: var(--colorVioletaOscuro);
@@ -31,33 +33,29 @@
     align-items: center;
 }
 
-.leb{
+.leb {
     color: var(--colorAmarillo);
-    padding:10px;
-
+    padding: 10px;
 }
-.inpu-st{
-    justify-content:first baseline;
+
+.inpu-st {
+    justify-content: first baseline;
     width: 100%;
     height: fit-content;
-    
 }
 
-
-
-.error-message{
+.error-message {
     background-color: var(--colorBlanco);
     color: red;
     font-size: 25px;
     margin-top: 50px;
-    padding:10px;
-    
+    padding: 10px;
 }
-.stiley-li{
-    
+
+.stiley-li {
     padding: 2px;
     background-color: var(--colorVioletaOscuro);
     color: var(--colorAmarillo);
     list-style: none;
-    text-decoration: none ;
+    text-decoration: none;
 }

@@ -95,14 +95,11 @@ const Checkout = () => {
                 </button>
                 <Link to='/' className='stiley-li'>Volver a la tienda</Link>
             </form>
-
             {cart.length === 0 && (
                 <h3 className='error-message'>Agregar productos al carrito.</h3>
             )}
 
-            {errorMessage && (
-                <h3 className='error-message'>{errorMessage}</h3>
-            )}
+
 
         </div>
     );

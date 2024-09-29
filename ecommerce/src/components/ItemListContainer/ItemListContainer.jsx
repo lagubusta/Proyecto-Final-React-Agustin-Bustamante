@@ -1,17 +1,13 @@
 import './ItemListContainer.css';
 import { useState, useEffect, cloneElement } from 'react';
-import { getProducts, getProductsByCategory } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom';
-// import { collection, doc, getDocs, getFirestore } from 'firebase/firestore'
-
 import { getDocs, collection, query, where, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    
     const { categoryId } = useParams()
 
     useEffect(() => {

@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 const CartItem = ({ id, name, img, price, stock }) => {
 
-    const { cart, addItem, quantity, increaseQuantity, decreaseQuantity, removeItem } = useContext(CartContext);
+    const { cart, quantity, increaseQuantity, decreaseQuantity, removeItem } = useContext(CartContext);
     const item = cart.find(item => item.id === id);
 
     return (

@@ -1,6 +1,9 @@
 # Proyecto final
-El proyecto final constiste en crear una tienda online.
+El proyecto final constiste en crear una tienda online, donde haya una lista de productos y también sus categorias. Este se van
+a poder agregar al carrito de compras y también eliminarse. Una vez finalizada la compra se agrega esa orden de venta a la base de datos.
 
+### Video
+https://www.youtube.com/watch?v=Rgb3RnFHWv4
 
 ## App.jsx
 Detalle de lo que contiene el archivo.
@@ -67,8 +70,8 @@ Importamos todo lo necesario de las ubicaciones correspondientes. Se usa **{ use
 
 ## Componente ItemDetail.jsx
 Importamos todo lo necesario de las ubicaciones correspondientes. Ademas importamos el **hook useState** para gestionar el estado del componente y **usdConetex** para acceder al contexto global del carrito **CartContext**
-- ``const ItemDetail = ({ id, name, img, category, price, stock }) => {``
-  - Es un componente funcional qeu recibe props de un producto individual, este se usa para ver el detalle del mismo y da la posibilidad de agregarlo al carrito.
+- ``const ItemDetail = ({ id, name, img, category, price, stock, description }) => {``
+  - Es un componente funcional que recibe props de un producto individual, este se usa para ver el detalle del mismo y da la posibilidad de agregarlo al carrito.
 - ``const [quantityAdded, setQuatityAdded] = useState(0)``
   - Se usa el **hook useState** para almacenar las unidades del producto que se agregaron al carrito.
   - **quantityAdded** empiza en 0, por lo que no se agregó ninguna unidad del prodcuto.
@@ -175,8 +178,16 @@ Importamos todo lo necesario de las ubicaciones correspondientes. Ademas importa
       - Muestra el ``{total}`` dentro de un ``<h3>``
       - Agregamos un ``<button>`` que al hacer click ejecuta **clearCart**, para vaciar el carrito.
 
-
-
+# Componente CartItem
+- Importamos las cosas necesarias de sus ubicaciones correspondientes.
+- ``const CartItem = ({ id, name, img, price, stock }) => {---}``
+  - Recibe las props id, name, img, price, stock, son las características de cada producto dentro del carrito.
+- ``useContext(CartContext)``
+  - Para extraer las propiedades del contexto del carrito.
+- ``cart.find(item => item.id === id);``
+  - Busca dentro del **cart** el producto que coincida el **id** de las props.
+  - La función **find** busca y devuelve el primer elemento encontrado y lo guarda en la la constante **item**.
+- Muestra como va a ser el renderizado.
 
 ## Componente CartWidget.jsx
 - Importamos las cosas necesarias de sus ubicaciones correspondientes.
@@ -184,9 +195,79 @@ Importamos todo lo necesario de las ubicaciones correspondientes. Ademas importa
   - Define el componente que muestra el carrito de compras como img.
     - ``const { totalQuantity } = useContext(CartContext)``
       - Usamos el **hook** para extraer el **total quatity** del **CartContext**.
-
-
+      - 
 ## Componente Footer.jsx
 - Importamos el estilo css.
 - Definimos el componente que contiene un ``<div>`` con un ``<h4>``.
 
+## Componente Err
+- Importamos las cosas que son necesarias.
+- Va a retornar un ``<div>`` que muestra un ``<h3>`` y ``<button>`` para volver a la tienda.
+
+## Componente Checkout
+- ``const [...,...] = useState(...);``
+  - Importamos las cosas que son necesarias.
+  - ``loading``: Indica si la orden se esta generando.
+  - ``orderId``: Guarda el ID de la orden generada en la **db**.
+  - ``name, phone, email``: Almacena lo ingresado por el usuario.
+  - ``eerorMessage``: Se muestra en caso de error.
+- ``const { cart, totalPrice, clearCart } = useContext(CartContext);``
+  - Extrae los elementos **cart, totalPrice, clearCart** del ``<CartContext>``.
+- ``const handleCreateOrder = async (e) => {...}``
+  - Es importante que sea **async** por que es la conexión con la base de datos y a veces demora.
+  - Es el evento que se dispara al enviar el formulario.
+- ``e.preventDefault();``
+  - Evita que se recager al enviar el formulario.
+- ``if (cart.length === 0) {...}``
+  - Verifica que el carrito es vacio, si esto es **true** va a mostrar el estadio **ErrorMessage**. Ejecuta return hasta que la condición se cumpla.
+  -``setLoading(true);``
+    - Cambia el estado a **true**, para mostrar que se esta generando la orden..
+- ``<try>``
+  - para ejecutar código que podría fallar.
+  - ``const order = {...}``
+    - La orden a ser guardad, tiene como props:
+      - buyer, name, phone, email, items, total data.
+  - ``const docRef = await addDoc(collection(db, "orders"), order);``
+  - **addDoc** s la función que permite agregar nuevo doc a la colección en la db.
+    - ``collection(db,"orders") ``: otiene una referencia dentro de la db.
+  - ``await``: Espera y retorna una referencia al nuevo doc creado.
+  - ``setOrderId(docRef.id);``
+    - El ID de la orden se guarda en OrderId para que el usuario lo vea.
+  - ``clearCart();`` Limpia el carrito una vez finalizado.
+  - ``catch (error) {..} ``
+    - Muestra un error en caso que pase.
+  - ``finally {setLoading(false);}``
+    - Permite que se actulice.
+- Esto se va a renderizar con un ``<h2>``
+- Un ``<form>`` para que el usuario complete, en caso que esten vacios no van a poder finalizar la compra.
+- En caso qeu el carrito este vacio va a mostrar el mensaje qeu error
+
+## Componente OrderHistory
+- Importamos las cosas que son necesarias.
+- ``const OrderHistory = () => {``
+  - Administra el historial de compras del usuario.
+- ``const [orders, setOrders] = useState([]);`
+  - Declara los diferentes estados. **orders, loading, visibleOrders**-
+- `useEffect(() => {`
+  - Para ejecutar **fetchOrders**.
+  - ``fetchOrders`` se encarga de obtener las ordenes desde la db.
+  - `setLoading(true)`
+    - Activa el estado de cargar.
+- `const querySnapshot = await getDocs(collection(db, 'orders'))`:
+  - Obtiene informacion de la colección en Firestore.
+- ``const fetchedOrders = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))``
+  - Mapea cada documento.
+-``setOrders(fetchedOrders)``
+  - Actualiza su estado.
+- ``catch (error)``
+  - Captura cualquier error en la obtención de las órdenes y lo imprime
+- ``finally { setLoading(false) }``
+  - Finaliza el estado de carga.
+- ``const toggleOrderVisibility = (orderId) => {``
+  - Función que alterna la vista de los detalles en cada orden.
+  - `setVisibleOrders((prevVisibleOrders) =>`
+    - Actualiza ele stado.
+- El componente se va a rederizar de esta manera.
+  - Va a contener el historial
+  - Si no hay compras realziadas va a mostrar un mensaje.
+  - En caso que este bien va a mostrar el resto del detalle de las ventas.

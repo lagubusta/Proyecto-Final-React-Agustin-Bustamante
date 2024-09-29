@@ -2,7 +2,6 @@
     text-align: centrer;
     background-color: var(--colorAmarillo);
     width: 100%;
-
 }
 
 .Controls {
@@ -12,18 +11,15 @@
     width: 20;
     margin: auto;
     text-align: center;
-
 }
 
 .Container-Buttons {
-
     align-items: center;
     justify-content: center;
     height: fit-content;
     padding: 0.2rem;
     justify-items: center;
     padding-bottom: 10px;
-
 }
 
 .Button {
@@ -31,6 +27,5 @@
     margin: 0 1rem;
     background-color: var(--colorVioletaOscuro);
     color: var(--colorAmarillo);
-    ;
     height: fit-content;
 }
